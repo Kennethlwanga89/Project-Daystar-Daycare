@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: rgb(163, 255, 163);
+    --blue: rgb(188, 188, 255);
+    --purple: purple;
+    --red: red;
+    --yellow: yellow;
+    --orange: orange;
+    --bg-1: url('./BG-01.png');
+    --bg-2: url('./BG-02.jpg');
+    --bg-3: url('./BG-03.jpg');
+}
+
+body {
+    font-family: nunito;
+}
+
+
+/* Laptop Screen 1 */
+@media (max-width: 1920px) {
+    body {
+        background-color: var(--green);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'a b'
+        ;
+    }
+
+    .welcome {
+        background-color: rgb(255, 255, 255, .5);
+        color: var(--purple);
+        opacity: 20;
+        letter-spacing: 10px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 10px rgb(187, 187, 187);
+        border: 2px solid white;
+        font-weight: bolder;
+    }
+
+    .container-1 {
+        grid-area: a;
+        height: 100dvh; /* Add this to help center content */
+        display: grid;
+        place-content: center;
+        box-shadow: 0px 0px 10px var(--purple);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        text-align: center;
+    }
+
+    .container-2 {
+        grid-area: b;
+        height: 100dvh; /* Add this to help center content */
+        display: grid;
+        place-content: center;
+    }
+
+    .sign-in-form {
+        height: auto;
+        display: grid;
+        place-content: center;
+    }
+
+    input, button {
+        all: unset;
+    }
+
+    button {
+        text-align: center;
+    }
+
+    .email, .password {
+        margin: 20px 0;
+        background-color: white;
+        padding: 15px;
+        text-decoration: none;
+        box-shadow: inset 0px 2px 10px rgb(187, 187, 187);
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    .login {
+        background-color: var(--blue);
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: inset 0px 2px 10px rgb(126, 126, 126);
+        border: 2px solid var(--blue);
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .register {
+        background-color: var(--green);
+        color: var(--purple);
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: inset 0px 2px 10px rgb(126, 126, 126);
+        border: 2px solid var(--green);
+        cursor: pointer;
+        font-weight: bolder;
+    }
+}
+
+/* Laptop Screen 2 */
+@media (max-width: 1730px) {
+    body {
+        background-color: var(--green);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 3 */
+@media (max-width: 1600px) {
+    body {
+        background-color: var(--green);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 4 */
+@media (max-width: 1400px) {
+    body {
+        background-color: var(--blue);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 5 */
+@media (max-width: 1350px) {
+    body {
+        background-color: var(--blue);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 6 */
+@media (max-width: 1300px) {
+    body {
+        background-color: var(--blue);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 7 */
+@media (max-width: 1250px) {
+    body {
+        background-color: var(--purple);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 8 */
+@media (max-width: 1150px) {
+    body {
+        background-color: var(--purple);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Laptop Screen 9 */
+@media (max-width: 1100px) {
+    body {
+        background-color: var(--purple);
+        background-image: var(--bg-1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Tablet Screen 1 */
+@media (max-width: 900px) {
+    body {
+        background-color: var(--red);
+        background-image: var(--bg-2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Tablet Screen 2 */
+@media (max-width: 895px) {
+    body {
+        background-color: var(--red);
+        background-image: var(--bg-2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Tablet Screen 3 */
+@media (max-width: 750px) {
+    body {
+        background-color: var(--red);
+        background-image: var(--bg-2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Tablet Screen 4 */
+@media (max-width: 700px) {
+    body {
+        background-color: var(--yellow);
+        background-image: var(--bg-2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Tablet Screen 5 */
+@media (max-width: 600px) {
+    body {
+        background-color: var(--yellow);
+        background-image: var(--bg-2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Mobile Screen 1 */
+@media (max-width: 450px) {
+    body {
+        background-color: var(--orange);
+        background-image: var(--bg-3);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Mobile Screen 2 */
+@media (max-width: 450px) {
+    body {
+        background-color: var(--orange);
+        background-image: var(--bg-3);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Mobile Screen 3 */
+@media (max-width: 425px) {
+    body {
+        background-color: var(--orange);
+        background-image: var(--bg-3);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
+/* Mobile Screen 4 */
+@media (max-width: 400px) {
+    body {
+        background-color: var(--orange);
+        background-image: var(--bg-3);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}

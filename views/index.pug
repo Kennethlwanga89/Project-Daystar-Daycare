@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  script(src='https://kit.fontawesome.com/f224abdd82.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='style.css')
+  title Login $ Register
+.container
+  .container-1
+    .welcome
+      div
+        p Welcome
+      div
+        p to
+      div
+        p Daystar Daycare
+  .container-2
+    .signin
+      form.sign-in-form(action='')
+        .input-field.email
+          i
+            svg(width='20' height='20' viewbox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M15.5 2.58333C8.37 2.58333 2.58334 8.36999 2.58334 15.5C2.58334 22.63 8.37 28.4167 15.5 28.4167H21.9583V25.8333H15.5C9.89417 25.8333 5.16667 21.1058 5.16667 15.5C5.16667 9.89416 9.89417 5.16666 15.5 5.16666C21.1058 5.16666 25.8333 9.89416 25.8333 15.5V17.3471C25.8333 18.3675 24.9163 19.375 23.8958 19.375C22.8754 19.375 21.9583 18.3675 21.9583 17.3471V15.5C21.9583 11.935 19.065 9.04166 15.5 9.04166C11.935 9.04166 9.04167 11.935 9.04167 15.5C9.04167 19.065 11.935 21.9583 15.5 21.9583C17.2825 21.9583 18.91 21.235 20.0725 20.0596C20.9121 21.2092 22.3588 21.9583 23.8958 21.9583C26.4404 21.9583 28.4167 19.8917 28.4167 17.3471V15.5C28.4167 8.36999 22.63 2.58333 15.5 2.58333ZM15.5 19.375C13.3558 19.375 11.625 17.6442 11.625 15.5C11.625 13.3558 13.3558 11.625 15.5 11.625C17.6442 11.625 19.375 13.3558 19.375 15.5C19.375 17.6442 17.6442 19.375 15.5 19.375Z' fill='black')
+          input#email(type='email' placeholder='Email' name='email' required='')
+        .input-field.password
+          i
+            svg(width='20px' height='20px' viewbox='0 0 15 15' xmlns='http://www.w3.org/2000/svg')
+              path(d='M3 6V3.5C3 1.567 4.567 0 6.5 0C8.433 0 10 1.567 10 3.5V6H11.5C12.3284 6 13 6.67157 13 7.5V8.05001C14.1411 8.28164 15 9.29052 15 10.5C15 11.7095 14.1411 12.7184 13 12.95V13.5C13 14.3284 12.3284 15 11.5 15H1.5C0.671573 15 0 14.3284 0 13.5V7.5C0 6.67157 0.671573 6 1.5 6H3ZM4 3.5C4 2.11929 5.11929 1 6.5 1C7.88071 1 9 2.11929 9 3.5V6H4V3.5ZM8.5 9C7.67157 9 7 9.67157 7 10.5C7 11.3284 7.67157 12 8.5 12H12.5C13.3284 12 14 11.3284 14 10.5C14 9.67157 13.3284 9 12.5 9H8.5Z')
+          input#password(type='password' placeholder='Password' name='password' required='')
+        button.login(type='submit' title='logbutton' placeholder='login') Sign In
+        br
+        button.register(type='submit' title='regbutton') Register
+  //
+    <div class="container-3">
+    <form class="login-form">
+    <h2>Login</h2>
+    <div class="input-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    </div>
+    <div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+    </form>
+    </div>

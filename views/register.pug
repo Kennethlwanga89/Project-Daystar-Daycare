@@ -1,0 +1,116 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+//
+  <div class="container-1">
+  <form id="registrationForm">
+  <div class="input-field email">
+  <input title="email" type="email" id="email" name="email" placeholder="Email" required>
+  </div>
+  <div class="input-field babyName">
+  <input title="babyName" type="text" id="babyName" name="babyName" placeholder="babyName" required>
+  </div>
+  <div class="input-field age">
+  <input title="age" type="number" id="age" name="age" placeholder="age" required>
+  </div>
+  <div class="input-field gender">
+  <select title="gender" id="gender" name="gender" placeholder="gender" required>
+  <option value="">Select your gender</option>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  </select>
+  </div>
+  <div class="input-field password">
+  <input title="password" type="password" id="password" name="password" placeholder="password" required>
+  </div>
+  <div class="form-group">
+  <input title="confirmPassword" type="password" id="confirmPassword" name="confirmPassword" placeholder="confirmPassword" required>
+  </div>
+  <div class="form-group">
+  <button type="submit">Register</button>
+  </div>
+  </form>
+  </div>
+.container-1
+  .registration
+    form#registrationForm.sign-in-form(action='/register' method='POST')
+      .input-field.firstName
+        i
+          svg(width='20' height='20' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d='M18.41 5.8L17.2 4.59C16.42 3.81 15.15 3.81 14.37 4.59L11.69 7.27L3 15.96V20H7.04L15.78 11.26L18.41 8.63C19.2 7.85 19.2 6.58 18.41 5.8ZM6.21 18H5V16.79L13.66 8.13L14.87 9.34L6.21 18ZM11 20L15 16H21V20H11Z' fill='black')
+        input#firstName(type='text' placeholder='FirstName' name='firstName')
+      .input-field.lastName
+        i
+          svg(width='20' height='20' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d='M18.41 5.8L17.2 4.59C16.42 3.81 15.15 3.81 14.37 4.59L11.69 7.27L3 15.96V20H7.04L15.78 11.26L18.41 8.63C19.2 7.85 19.2 6.58 18.41 5.8ZM6.21 18H5V16.79L13.66 8.13L14.87 9.34L6.21 18ZM11 20L15 16H21V20H11Z' fill='black')
+        input#lastName(type='text' placeholder='LastName' name='lastName')
+      .input-field.age
+        i
+          svg(width='20' height='20' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d='M13 2.05V5.08C16.39 5.57 19 8.47 19 12C19 12.9 18.82 13.75 18.52 14.54L21.12 16.07C21.68 14.83 22 13.45 22 12C22 6.82 18.05 2.55 13 2.05ZM12 19C8.13 19 5 15.87 5 12C5 8.47 7.61 5.57 11 5.08V2.05C5.94 2.55 2 6.81 2 12C2 17.52 6.47 22 11.99 22C15.3 22 18.23 20.39 20.05 17.91L17.45 16.38C16.7976 17.1991 15.9686 17.8601 15.0249 18.3138C14.0812 18.7675 13.0471 19.0021 12 19Z' fill='black')
+        input#age(type='number' placeholder='Age' name='age')
+      .input-field.dob
+        i
+          svg#Icons(enable-background='new 0 0 70 70' height='20px' version='1.1' viewbox='0 0 70 70' width='20px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+            g
+              path(d='M51,19h-4v-4h-4v4H27v-4h-4v4h-4c-2.209,0-4,1.791-4,4v28c0,2.209,1.791,4,4,4h32c2.209,0,4-1.791,4-4V23   C55,20.791,53.209,19,51,19z M51,51H19V31h32V51z M51,27H19v-4h32V27z')
+              rect(height='4' width='4' x='35' y='35')
+              rect(height='4' width='4' x='43' y='35')
+              rect(height='4' width='4' x='35' y='43')
+              rect(height='4' width='4' x='27' y='43')
+        input#dob(type='date' placeholder='Date of Birth' name='dob')
+      .input-field.gender
+        i
+          svg.bi.bi-gender-ambiguous(height='20' viewbox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg')
+            path(d='M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1H11.5zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z' fill-rule='evenodd')
+        select#gender(title='gender' placeholder='gender' name='gender')
+          option(value='') Select your gender
+          option(value='male') Male
+          option(value='female') Female
+      .input-field.location
+        i
+          svg(width='20' height='20' viewbox='0 0 32 32' xmlns='http://www.w3.org/2000/svg')
+            title
+              g#locate_location_map_pin(data-name='locate location map pin')
+                path(d='M23.78,6.15A11,11,0,0,0,8.22,21.71l4.1,4.1a1,1,0,1,0,1.42-1.42l-4.1-4.1a9,9,0,1,1,12.72,0l-7.07,7.07a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l7.07-7.07A11,11,0,0,0,23.78,6.15Z')
+                path(d='M21,14a5,5,0,1,0-5,5A5,5,0,0,0,21,14Zm-8,0a3,3,0,1,1,3,3A3,3,0,0,1,13,14Z')
+        input#location(type='text' placeholder='Location' name='location')
+      .input-field.fatherName
+        i
+          svg(width='20' height='20' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d='M18.41 5.8L17.2 4.59C16.42 3.81 15.15 3.81 14.37 4.59L11.69 7.27L3 15.96V20H7.04L15.78 11.26L18.41 8.63C19.2 7.85 19.2 6.58 18.41 5.8ZM6.21 18H5V16.79L13.66 8.13L14.87 9.34L6.21 18ZM11 20L15 16H21V20H11Z' fill='black')
+        input#fatherName(type='text' placeholder="Father's Name" name='fatherName')
+      .input-field.motherName
+        i
+          svg(width='20' height='20' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d='M18.41 5.8L17.2 4.59C16.42 3.81 15.15 3.81 14.37 4.59L11.69 7.27L3 15.96V20H7.04L15.78 11.26L18.41 8.63C19.2 7.85 19.2 6.58 18.41 5.8ZM6.21 18H5V16.79L13.66 8.13L14.87 9.34L6.21 18ZM11 20L15 16H21V20H11Z' fill='black')
+        input#motherName(type='text' placeholder="Mother's Name" name='motherName')
+      .input-field.email
+        i
+          svg(width='20' height='20' viewbox='0 0 31 31' xmlns='http://www.w3.org/2000/svg')
+            path(d='M15.5 2.58333C8.37 2.58333 2.58334 8.36999 2.58334 15.5C2.58334 22.63 8.37 28.4167 15.5 28.4167H21.9583V25.8333H15.5C9.89417 25.8333 5.16667 21.1058 5.16667 15.5C5.16667 9.89416 9.89417 5.16666 15.5 5.16666C21.1058 5.16666 25.8333 9.89416 25.8333 15.5V17.3471C25.8333 18.3675 24.9163 19.375 23.8958 19.375C22.8754 19.375 21.9583 18.3675 21.9583 17.3471V15.5C21.9583 11.935 19.065 9.04166 15.5 9.04166C11.935 9.04166 9.04167 11.935 9.04167 15.5C9.04167 19.065 11.935 21.9583 15.5 21.9583C17.2825 21.9583 18.91 21.235 20.0725 20.0596C20.9121 21.2092 22.3588 21.9583 23.8958 21.9583C26.4404 21.9583 28.4167 19.8917 28.4167 17.3471V15.5C28.4167 8.36999 22.63 2.58333 15.5 2.58333ZM15.5 19.375C13.3558 19.375 11.625 17.6442 11.625 15.5C11.625 13.3558 13.3558 11.625 15.5 11.625C17.6442 11.625 19.375 13.3558 19.375 15.5C19.375 17.6442 17.6442 19.375 15.5 19.375Z' fill='black')
+        input#email(type='email' placeholder='Email' name='email')
+      .input-field.password
+        i
+          svg(width='20px' height='20px' viewbox='0 0 15 15' xmlns='http://www.w3.org/2000/svg')
+            path(d='M3 6V3.5C3 1.567 4.567 0 6.5 0C8.433 0 10 1.567 10 3.5V6H11.5C12.3284 6 13 6.67157 13 7.5V8.05001C14.1411 8.28164 15 9.29052 15 10.5C15 11.7095 14.1411 12.7184 13 12.95V13.5C13 14.3284 12.3284 15 11.5 15H1.5C0.671573 15 0 14.3284 0 13.5V7.5C0 6.67157 0.671573 6 1.5 6H3ZM4 3.5C4 2.11929 5.11929 1 6.5 1C7.88071 1 9 2.11929 9 3.5V6H4V3.5ZM8.5 9C7.67157 9 7 9.67157 7 10.5C7 11.3284 7.67157 12 8.5 12H12.5C13.3284 12 14 11.3284 14 10.5C14 9.67157 13.3284 9 12.5 9H8.5Z')
+        input#password(type='password' placeholder='Password' name='password')
+      button.login(type='submit' title='logbutton' placeholder='login') Register
+      br
+      button.register(type='button' title='regbutton') Sign In
+//
+  <script>
+  document.getElementById('registrationForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var password = document.getElementById('password').value;
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  if (password !== confirmPassword) {
+  alert('Passwords do not match.');
+  } else {
+  alert('Registration successful!');
+  // Here you can add code to submit the form data to the server
+  }
+  });
+  </script>

@@ -42,6 +42,7 @@ app.set('views', path.join(__dirname, 'views')); // Specifying the directory whe
 
 ////////////////////
 // MIDDLEWARE
+app.use(express.static(path.join(__dirname, 'public'))) //must have tells app that there are static files in public folder
 app.use(express.urlencoded({extended:true})); //must have 
 // This helps to pick info from the forms and transport it to wherever it is going
 app.use(express.json());

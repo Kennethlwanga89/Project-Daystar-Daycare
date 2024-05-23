@@ -11,9 +11,9 @@
     --red: red;
     --yellow: yellow;
     --orange: orange;
-    --bg-1: url('./BG-01.png');
-    --bg-2: url('./BG-02.jpg');
-    --bg-3: url('./BG-03.jpg');
+    --bg-1: url('/images/BG-01.png');
+    --bg-2: url('/images/BG-02.jpg');
+    --bg-3: url('/images/BG-03.jpg');
 }
 
 body {

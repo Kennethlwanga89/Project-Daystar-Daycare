@@ -47,3 +47,5 @@ const registerBabySchema = new mongoose.Schema ({
         required: true
     }
 })
+
+module.exports = mongoose.model('RegisterBaby', registerBabySchema)

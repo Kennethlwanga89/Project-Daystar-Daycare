@@ -5,6 +5,7 @@ const express = require('express'); //must have
 const mongoose = require('mongoose'); //must have
 const path = require('path'); //must have
 require('dotenv').config(); //must have, and connects to the dot env in line 23
+const registerBabyRoute = require('./routes/registerBabyRoutes') // importing routes
 ////////////////////
 
 
@@ -73,6 +74,9 @@ app.get('/sitterlist', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register');
 })
+
+// Use imported Routes
+app.use('/', registerBabyRoute);
 // Query Params
 // Route to search path
 // app.get('/baby', (req, res) => {
